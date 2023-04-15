@@ -96,7 +96,7 @@ const updateJob = async (req, res) => {
 const deleteJob = async (req, res) => {
   const { id: jobId } = req.params;
 
-  const job = await Job.findOne({ _id: jobId });
+  const job = await Job.findOne({ _id: jobId }); 
 
   if (!job) {
     throw new NotFoundError(`No job with id :${jobId}`);
